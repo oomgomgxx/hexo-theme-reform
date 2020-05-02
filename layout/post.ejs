@@ -1,0 +1,64 @@
+<!-- 文章页面 -->
+<article id="post">
+
+  <!-- 文章标题 -->
+  <h1><%=page.title%></h1>
+
+  <!-- 文章元信息 -->
+  <span class="post-metadata">
+    <!-- 文章日期 -->
+    <i class="fa fa-calendar"></i>&thinsp;<%= date(page.date) %> &ensp;
+    <!-- 文章作者 -->
+    作者: <%= config.author %>
+  </span>
+
+  <hr/>
+
+  <!-- 文章内容 -->
+  <%-page.content%>
+
+  <!-- 文章原地址信息 -->
+  <div id="article-origin">
+    文章作者: 
+    <a href="<%= config.author %>">
+      <%= config.author %>
+    </a> <br/>
+    文章链接: 
+    <a href="<%- url_for(page.path) %>">
+      <%= page.title %>
+    </a> <br/>
+    版权声明: 转载请注明来自 
+    <a href="<%= config.url %>">
+      <%= config.url %>
+    </a>
+  </div>
+
+  <!-- 其他内容 -->
+
+
+  <!-- Gitalk 评论功能 -->
+  <% if (theme.gitalk.enable) { %>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+          clientID: '<%= theme.gitalk.clientID %>',
+          clientSecret: '<%= theme.gitalk.clientSecret %>',
+          repo: '<%= theme.gitalk.repo %>',
+          owner: '<%= theme.gitalk.owner %>',
+          admin: ['<%= theme.gitalk.admin %>'],
+          id: md5('<%= page.title %>'),
+          distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')           
+    </script>
+  <% } %>
+  
+</article>
+<!-- 分页 -->
+<div id="paginator">
+  <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
+</div>
+<!-- 文章目录 -->
+<div id="mytoc">
+  <%- toc(page.content, {list_number: false}) %>
+</div>

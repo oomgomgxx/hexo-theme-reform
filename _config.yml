@@ -1,0 +1,43 @@
+
+# html lang
+language: zh-CN
+
+# 导航栏
+menu:
+  最新文章: /
+  文章存档: /archives
+  书籍推荐: /books
+  关于博客: /about
+
+# 页面信息
+footer_msg: 魔鬼藏在細節中
+favicon: /img/favicon.ico
+developer_msg: Developed by TanDi.
+
+
+#  摘要配置，配合hexo的<!-- more --> 使用
+excerpt_render: true # 开启摘要功能
+excerpt_length: 200
+excerpt_link: 阅读全文
+
+
+# gitalk settings
+gitalk:
+  enable: true #用来做启用判断可以不用
+  owner: #Github 用户名,
+  repo: #储存评论issue的github仓库名
+  admin: #Github 用户名,
+  clientID: #`Github Application clientID`
+  clientSecret: #`Github Application clientSecret`
+
+# 博客样式
+stylesheets:
+- /css/main.css
+- /css/github.min.css
+
+# 博客脚本
+scripts:
+- /js/jquery.min.js
+- /js/main.js
+- /js/md5.min.js
+- /js/highlight.min.js

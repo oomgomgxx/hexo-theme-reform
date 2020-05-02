@@ -1,0 +1,126 @@
+// a visited 样式
+@import 'theme/aVisited'
+
+
+// 主页文章 --------------------------------------
+.recent-post-item
+  display inline-block
+  margin-bottom: 40px;
+  margin-right: 30px
+  width: 46%
+  padding-bottom: 5px
+  border-bottom: 1px solid rgba(gray,0.1)
+  @media (max-width: 1020px)
+    width: 85%
+    display block
+  @media (max-width: 768px)
+    width: 92%
+
+#id-post-metadata
+  margin-top: 1%
+  margin-bottom: 1%
+
+
+// 文章页
+#post
+  position relative
+  padding-left: 20px
+  padding-right: 20px
+  margin-right: 17.5%
+  @media (max-width: 1020px)
+    width: 85%
+
+#post a
+  color: globle-font-color
+  text-decoration: none
+  &:hover
+    color red
+
+#post ul li
+  margin-left: -15px
+  margin-bottom: 5px
+
+#post ul li a
+  text-decoration: none
+
+.post-title
+  font-size: 1.3rem
+  font-weight: bold
+  display inline
+  &:hover
+    text-decoration: underline
+
+// 文章元信息
+.post-msg
+  font-size: 4px
+  padding-top: 5px
+
+// 文章摘要
+.post-desc
+  font-size: 0.8rem
+  color: gray
+
+// 摘要显示全文按钮
+.excerpt-buttom
+  background-color: #E3B007
+  border-radius: 3px
+  text-decoration: none
+  font-size: 6px
+  margin-left: 3px
+  padding: 2px
+  &:hover
+    color: white !important
+
+// 文章元信息
+.post-metadata
+  font-size: 0.8rem
+  font-family: '方正兰亭'
+  color: rgba(gray, 0.7)
+
+
+// 文章目录
+#mytoc
+  margin: 0
+  padding-left: 10px
+  top: 0
+  right 0
+  position: fixed
+  font-size: 0.9rem
+  height 96%
+  width: 210px
+  background-color:rgba(#E3B007, 0.2)
+  border: 5px dashed rgba(#E3B007, 0.1) !important
+  overflow-x: hidden
+  @media screen and (max-width: 1300px)
+    background-color:rgba(#E3B007, 0.1)
+  @media screen and (max-width: 1020px)
+    display: none
+
+// 局部滚动条样式
+// 可以将 id 改为 * 改为全局
+#mytoc::-webkit-scrollbar
+  width: 10px
+#mytoc::-webkit-scrollbar-thumb
+  border-radius: 8px;
+  background-color: hsla(#2A2935, 0.3);
+  transition: background-color 0.3s;
+
+#mytoc a
+  color: gray !important
+  text-decoration: none !important
+  margin-bottom: 2px
+  &:hover
+    color: #dfad07 !important
+
+#mytoc ol, #mytoc li
+  list-style-type square
+  color rgba(black, 0.7)
+  margin-bottom: 5px !important
+  margin-left: -14px !important
+
+// 主页页面名称
+#recent-posts .page-name
+  color: gray
+  font-family: '宋体'
+  border-bottom: 1px solid rgba(gray,0.1)
+  margin-bottom: 20px

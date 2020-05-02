@@ -1,0 +1,12 @@
+Home: 首页
+Categories: 分类
+Archive: 文章存档
+Tags: 标签
+About: 关于博客
+Comments: 评论
+
+paginator: 
+    next_text: 下一页
+    prev_text: 上一页 
+    page: 第 %d 页
+    pageof: Page %d of %s

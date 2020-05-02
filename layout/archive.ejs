@@ -1,0 +1,35 @@
+
+<%
+const categoriesList = list_categories({ show_count: false });
+const tagsList = list_tags({ show_count: false });
+const archivesList = list_archives({ show_count: false });
+%>
+
+<div class="archive-title-name">
+  <h2>文章存档</h2>
+</div>
+
+<% if (is_archive()) { %>
+
+  <!-- 文章创建时间 -->
+  <% page.posts.each(article => { %>
+
+    <div class="archive-item">
+      <!-- 时间 -->
+      <time datetime="<%=date_xml(article.date)%>">
+        <%=date(article.date)%>
+      </time>
+      ---
+      <!-- 标题 -->
+      <a href="<%- url_for(article.path) %>">
+        <%= article.title %>
+      </a>
+    </div>
+  <% }) %>
+
+  <!-- 分页 -->
+  <div id="paginator">
+    <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
+  </div>
+
+<% } %>

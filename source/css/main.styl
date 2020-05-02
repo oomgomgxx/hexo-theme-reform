@@ -1,0 +1,98 @@
+@import 'theme/markdown'
+  
+// 字体和全局样式
+@import 'fonts'
+@import 'global'
+
+// 侧边导航栏
+@import 'nav'
+
+// 代码块高亮
+@import 'highlight'
+
+// 布局-中间部分样式 -------------------------------
+#content-outer
+  position absolute
+  padding-left: 2%
+  left 181px
+  height 100%
+  width: 85%
+  padding-right: 50px
+  @media screen and (max-width: 768px)
+    margin-left: 2%
+    left 0px
+    width: 100%
+
+#content-outer
+  padding-top: 1%
+#content-outer a
+  color: globle-nav-color
+#content-outer a&:hover
+  color: globle-font-color
+#content-inner
+  margin-left: 0.5%
+
+
+// 页脚
+#bottom-outer
+  position fixed
+  bottom -15px
+  left 180px
+  padding-left: 10px
+  height 30px
+  line-height: 30px
+  width: 87.5%
+  color: gray
+  font-size: 15px
+  margin-bottom: 15px
+  background-color: rgba(white, 0.8)
+  @media screen and (max-width: 768px)
+    left: 0
+    width: 100%
+  font-family: '青柳隶书'
+
+// 回到顶部
+#bottom-totop
+  margin-left: 2%
+  text-decoration: none
+#bottom-inner span
+  margin-left: 58% !important
+  @media screen and (max-width: 1020px)
+    margin-left: 53% !important
+  @media screen and (max-width: 768px)
+    margin-left: 40% !important
+
+
+
+// 文章展示（最新文章+文章页）
+@import 'post'
+
+
+
+// 分页 -----------------------------------
+#paginator
+  margin-bottom: 50px
+  margin-top: 30px
+  padding-top: 5px
+  border-top: 1px solid rgba(gray,0.1)
+
+.page-number
+#paginator a
+  text-decoration: none
+  color: globle-font-color
+  &:visited
+    color: black !important
+.prev
+  margin-right: 10px
+.page-number
+  margin-right: 10px
+
+
+// 文章存档
+@import 'archive'
+
+// 版权信息
+@import 'theme/article-origin'
+
+// 自定义页面样式
+@import 'message/about'
