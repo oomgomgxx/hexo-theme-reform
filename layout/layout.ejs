@@ -6,11 +6,11 @@
   if (is_category()) pageTitle = 'Category: ' + page.category;
   if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
   if (is_year()) pageTitle += ': ' + page.year;
-  pageTitle += ' [ ' + config.title + ' ]';
+  pageTitle += config.subtitle || config.title;
 %>
 
 <!DOCTYPE html>
-<html lang="<%=config.language%>">
+<html lang="<%= config.language %>">
 <head>
   <!-- 编码方式 -->
   <meta charset="UTF-8">
@@ -18,6 +18,15 @@
   <link rel="icon" href="<%= theme.favicon %>">
   <!-- 标题 -->
   <title> <%= pageTitle %> </title>
+
+  <!-- 网站SEO - 关键字和描述 -->
+  <% if (config.keywords !== undefined && config.keywords.length > 0) { %>
+    <meta name="keywords"  content="<%= config.keywords %>" />
+  <% } %>
+  <% if (config.description !== undefined && config.description.length > 0) { %>
+    <meta name="description" content="<%= config.description %>" />
+  <% } %>
+
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
   <!-- 内部脚本 -->
   <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
