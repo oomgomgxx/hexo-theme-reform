@@ -1,9 +1,26 @@
 
-<div id="category">
-  <h1><%=page.category%></h1>
+<%
+  const categoriesList = list_categories({ show_count: false });
+%>
+
+<!-- 待修改 -->
+
+<!-- 分类目录 -->
+<aside style="display: inline-block;" >
+  <h2>文章分类</h2>
+    <% if (categoriesList !== "") { %>
+      <%- categoriesList %>
+    <% } else { %>
+      <p>None.</p>
+    <% } %>
+</aside>
+
+<!-- 结果展示 -->
+<div id="category" style="display: inline-block;">
+  <h2> <%= page.category %> </h2>
   <% page.posts.each(article => { %>
     <div class="category-item">
-      <a href="<%=url_for(article.path)%>">
+      <a href="<%= url_for(article.path) %>">
         <%=article.title%>
       </a>
       <time datetime="<%=date_xml(article.date)%>">
