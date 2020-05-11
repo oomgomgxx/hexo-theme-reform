@@ -27,6 +27,7 @@ function wrapImageWithFancyBox() {
         }
     });
 
+    // fancybox配置选项
     $('[data-fancybox="images"]').fancybox({
       buttons : [ 
         'slideShow',
@@ -37,6 +38,20 @@ function wrapImageWithFancyBox() {
       ],
       thumbs : {
         autoStart : false
-      }
+      },
+      // 图片缩放大小
+      afterLoad : function( instance, slide ) {
+            if ( slide.type === 'image' ) {
+                // 处理过大的图片
+                if ( slide.height > 3000 ) {
+                    slide.width  = slide.width  * 0.4;
+                    slide.height = slide.height * 0.4;
+                }
+                else if ( slide.height > 2500 ) {
+                    slide.width  = slide.width  * 0.5;
+                    slide.height = slide.height * 0.5;
+                }
+            }
+        }
     });
 }
