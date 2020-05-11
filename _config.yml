@@ -32,14 +32,20 @@ gitalk:
   clientID: #`Github Application clientID`
   clientSecret: #`Github Application clientSecret`
 
+
+# 图片预览功能
+fancybox: true
+
+# seo相关
+google_seo_html_verify: "-Tun6WZu4MnAXucY6rUK-udbDuzBndQkKEn0FTgBvAs"
+baidu_seo_html_verify: "Kfp083TiDg"
+
+
 # 博客样式
 stylesheets:
 - /css/main.css
 - /css/github.min.css
 
-# seo相关
-google_seo_html_verify: "-Tun6WZu4MnAXucY6rUK-udbDuzBndQkKEn0FTgBvAs"
-baidu_seo_html_verify: "Kfp083TiDg"
 
 # 博客脚本
 scripts:

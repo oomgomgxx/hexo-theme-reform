@@ -31,20 +31,35 @@
   <meta name="google-site-verification" content="<%= theme.google_seo_html_verify %>" />
   <!-- baidu seo -->
   <meta name="baidu-site-verification" content="<%= theme.baidu_seo_html_verify %>" />
-
+  <!-- baidu auto commit -->
+  <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+    
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
   <!-- 内部脚本 -->
   <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <% theme.scripts.forEach(url => { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
+    <% theme.scripts.forEach(url => { %>
+      <script src="<%=url%>"></script>
+    <% }); %>
   <% } %>
 
   <!-- 内部样式文件 -->
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-  <% theme.stylesheets.forEach(url => { %>
-    <link rel="stylesheet" href="<%=url%>">
-  <% }); %>
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
   <% } %>
 
   <!-- 小图标 -->
@@ -53,6 +68,14 @@
   <link rel="stylesheet" href="/gitalk/gitalk.css" />
   <script src="/gitalk/gitalk.min.js"></script>
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
+
+  <!-- fancybox support -->
+  <% if (theme.fancybox) { %>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script type="text/javascript" src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="/js/wrapImage.js"></script>
+  <% } %>
+
 </head>
 
 <body>
