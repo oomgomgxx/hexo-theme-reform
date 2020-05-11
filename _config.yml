@@ -33,7 +33,7 @@ gitalk:
   clientSecret: #`Github Application clientSecret`
 
 
-# 图片预览功能
+# 图片预览
 fancybox: true
 
 # seo相关
