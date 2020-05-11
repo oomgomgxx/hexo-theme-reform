@@ -2,12 +2,14 @@
 # html lang
 language: zh-CN
 
+
 # 导航栏
 menu:
   最新文章: /
   文章存档: /archives
   书籍推荐: /books
   关于博客: /about
+
 
 # 页面信息
 footer_msg: 魔鬼藏在細節中
@@ -34,6 +36,10 @@ gitalk:
 stylesheets:
 - /css/main.css
 - /css/github.min.css
+
+# seo相关
+google_seo_html_verify: -Tun6WZu4MnAXucY6rUK-udbDuzBndQkKEn0FTgBvAs
+baidu_seo_html_verify: Kfp083TiDg
 
 # 博客脚本
 scripts:

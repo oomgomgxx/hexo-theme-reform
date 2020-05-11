@@ -19,7 +19,7 @@
   <!-- 标题 -->
   <title> <%= pageTitle %> </title>
 
-  <!-- 网站SEO - 关键字和描述 -->
+  <!-- 网站 seo 相关 -->
   <% if (config.keywords !== undefined && config.keywords.length > 0) { %>
     <meta name="keywords"  content="<%= config.keywords %>" />
   <% } %>
@@ -28,7 +28,13 @@
   <% } %>
 
   <!-- google seo -->
-  <meta name="google-site-verification" content="-Tun6WZu4MnAXucY6rUK-udbDuzBndQkKEn0FTgBvAs" />
+  <% if (theme.google_seo_html_verify !== undefined && theme.google_seo_html_verify > 0) { %>
+    <meta name="google-site-verification" content="<%= theme.google_seo_html_verify %>" />
+  <% } %>
+  <!-- baidu seo -->
+  <% if (theme.baidu_seo_html_verify !== undefined && theme.baidu_seo_html_verify > 0) { %>
+    <meta name="baidu-site-verification" content="<%= theme.baidu_seo_html_verify %>" />
+  <% } %>
 
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
   <!-- 内部脚本 -->
