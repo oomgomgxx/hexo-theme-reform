@@ -28,13 +28,9 @@
   <% } %>
 
   <!-- google seo -->
-  <% if (theme.google_seo_html_verify !== undefined && theme.google_seo_html_verify > 0) { %>
-    <meta name="google-site-verification" content="<%= theme.google_seo_html_verify %>" />
-  <% } %>
+  <meta name="google-site-verification" content="<%= theme.google_seo_html_verify %>" />
   <!-- baidu seo -->
-  <% if (theme.baidu_seo_html_verify !== undefined && theme.baidu_seo_html_verify > 0) { %>
-    <meta name="baidu-site-verification" content="<%= theme.baidu_seo_html_verify %>" />
-  <% } %>
+  <meta name="baidu-site-verification" content="<%= theme.baidu_seo_html_verify %>" />
 
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
   <!-- 内部脚本 -->
