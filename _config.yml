@@ -32,7 +32,6 @@ gitalk:
   clientID: #`Github Application clientID`
   clientSecret: #`Github Application clientSecret`
 
-
 # 图片预览
 fancybox: true
 

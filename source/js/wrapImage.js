@@ -6,7 +6,7 @@ $(document).ready(function() {
 // 包装img标签
 function wrapImageWithFancyBox() {
     $('img')
-    // .not('.sidebar-image img')
+    // .not('.sidebar-image img') // 排除
     .each(function() {
 
         var $image = $(this);
