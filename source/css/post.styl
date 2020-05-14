@@ -1,3 +1,5 @@
+@import 'global'
+
 // a visited 样式
 @import 'theme/aVisited'
 
@@ -70,7 +72,7 @@
 
 // 摘要显示全文按钮
 .excerpt-buttom
-  background-color: #E3B007
+  background-color: globle-font-color
   border-radius: 3px
   text-decoration: none
   font-size: 6px
@@ -96,11 +98,11 @@
   font-size: 0.9rem
   height 96%
   width: 210px
-  background-color:rgba(#E3B007, 0.2)
-  border: 5px dashed rgba(#E3B007, 0.1) !important
+  background-color:rgba(globle-font-color, 0.2)
+  border: 5px dashed rgba(globle-font-color, 0.1) !important
   overflow-x: hidden
   @media screen and (max-width: 1300px)
-    background-color:rgba(#E3B007, 0.1)
+    background-color:rgba(globle-font-color, 0.1)
   @media screen and (max-width: 1020px)
     display: none
 
@@ -110,7 +112,7 @@
   width: 10px
 #mytoc::-webkit-scrollbar-thumb
   border-radius: 8px;
-  background-color: hsla(#2A2935, 0.3);
+  background-color: hsla(globle-nav-color, 0.3);
   transition: background-color 0.3s;
 
 #mytoc a
@@ -118,7 +120,7 @@
   text-decoration: none !important
   margin-bottom: 2px
   &:hover
-    color: #dfad07 !important
+    color: globle-font-color !important
 
 #mytoc ol, #mytoc li
   list-style-type square

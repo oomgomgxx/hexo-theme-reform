@@ -19,6 +19,10 @@
   <!-- 标题 -->
   <title> <%= pageTitle %> </title>
 
+  <!-- 自适应 -->
+  <!-- 未编写手机端导航栏 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+
   <!-- 网站 seo 相关 -->
   <% if (config.keywords !== undefined && config.keywords.length > 0) { %>
     <meta name="keywords"  content="<%= config.keywords %>" />
@@ -31,21 +35,6 @@
   <meta name="google-site-verification" content="<%= theme.google_seo_html_verify %>" />
   <!-- baidu seo -->
   <meta name="baidu-site-verification" content="<%= theme.baidu_seo_html_verify %>" />
-  <!-- baidu auto commit -->
-  <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
     
   <!-- ================================== 不要放到下面，否则会闪烁 ====================================== -->
   <!-- 内部脚本 -->

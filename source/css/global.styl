@@ -25,9 +25,23 @@ hr
 
 article p a
   text-decoration: none
-  
-// 全局变量
+
+
+// 全局颜色变量
 globle-nav-color = #2A2935
 globle-font-color = #E3B007
+// globle-font-color = #00C78C
+
 
 @import 'theme/aVisited'
+
+// 选中文字背景
+*::selection
+  background globle-font-color
+  color white
+*::-moz-selection
+  background globle-font-color
+  color white
+*::-webkit-selection
+  background globle-font-color
+  color white
