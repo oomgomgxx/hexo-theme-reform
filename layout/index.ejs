@@ -1,5 +1,9 @@
+<!-- 页面文章输出 -->
 <%- partial('partials/recent-posts') %>
 
-<div id="paginator">
-  <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
-</div>
+<!-- 全局分页按钮 -->
+<% if (page.total > 1) { %> 
+  <div id="paginator">
+    <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
+  </div>
+<% } %> 

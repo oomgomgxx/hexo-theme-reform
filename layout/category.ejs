@@ -1,34 +1,53 @@
+<div id="recent-posts">
+  
+  <!-- 当前分类 -->
+  <div class="page-name">
+    <h2>分类: <%= page.category %></h2>
+  </div>
 
-<%
-  const categoriesList = list_categories({ show_count: false });
-%>
+  <!-- 迭代当前分类文章 -->
+  <% page.posts.each(post => { %>
 
-<!-- 待修改 -->
+     <!-- 主页文章选项 -->
+     <div class="recent-post-item">
+      <!-- item start -->
 
-<!-- 分类目录 -->
-<aside style="display: inline-block;" >
-  <h2>文章分类</h2>
-    <% if (categoriesList !== "") { %>
-      <%- categoriesList %>
-    <% } else { %>
-      <p>None.</p>
-    <% } %>
-</aside>
+      <!-- 文章名称 -->
+      <div class="post-title">
+        <a href="<%=url_for(post.path)%>" style="text-decoration: none;" >
+          <%=post.title%>
+        </a>
+      </div>
 
-<!-- 结果展示 -->
-<div id="category" style="display: inline-block;">
-  <h2> <%= page.category %> </h2>
-  <% page.posts.each(article => { %>
-    <div class="category-item">
-      <a href="<%= url_for(article.path) %>">
-        <%=article.title%>
-      </a>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
+      <!-- 文章元信息 -->
+      <div id="id-post-metadata" class="post-metadata">
+        <i class="fa fa-calendar"></i>&thinsp;
+        <!-- 文章日期 -->
+        <time datetime="<%= post.date.toJSON() %>"></time><%=date(post.date)%> &ensp; 
+        <!-- 文章作者 -->
+        作者: <%= config.author %>
+      </div>
+
+      <!-- 摘要 -->
+      <div class="post-desc">
+        <!-- 判断是否开启摘要 -->
+        <% if (theme.excerpt_render) { %>
+          <%- truncate(strip_html(post.excerpt), {length: theme.excerpt_length}) %>
+          <!-- 阅读全文按钮：如果没有摘要则不显示 -->
+          <% if (post.excerpt.length) { %>
+            <a class="excerpt-buttom" href="<%=url_for(post.path)%>"><%=theme.excerpt_link%></a>
+          <% } %>
+        <% } %>
+      </div>
+
+      <!-- item end -->
     </div>
+
+   
   <% }); %>
+
 </div>
+
 
 <div id="paginator">
   <%-paginator({prev_text: '上一页',next_text: '下一页'})%>

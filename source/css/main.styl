@@ -3,6 +3,7 @@
 // 字体和全局样式
 @import 'fonts'
 @import 'global'
+@import 'tag'
 
 // 侧边导航栏
 @import 'nav'
@@ -68,19 +69,26 @@
 @import 'post'
 
 
-
 // 分页 -----------------------------------
 #paginator
   margin-bottom: 50px
   margin-top: 30px
   padding-top: 5px
   border-top: 1px solid rgba(gray,0.1)
+  border-bottom: 1px solid rgba(gray,0.1)
+  padding 0.5em 0.5em
 
 .page-number
+#paginator span
 #paginator a
   text-decoration: none
+  margin 0
+  padding 5px 5px
+
+.next
 .prev
   margin-right: 10px
+
 .page-number
   margin-right: 10px
 

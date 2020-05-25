@@ -1,10 +1,13 @@
+
 <article id="page">
+  
+  <!-- 页面标题 -->
   <div class="new-page-name">
-    <h2><%=page.title%></h2>
+    <h2><%= page.title %></h2>
   </div>
-  <%-page.content%>
+
+  <!-- 页面内容 -->
+  <%- page.content %>
+
 </article>
 
-<div id="paginator">
-  <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
-</div>

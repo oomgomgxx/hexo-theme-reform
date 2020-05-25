@@ -1,18 +1,17 @@
+<div id="recent-posts">
+  
+  <!-- 当前分类 -->
+  <div class="page-name">
+    <h2>标签: <%= page.tag %></h2>
+  </div>
 
-<div id="tag">
-  <h1><%=page.tag%></h1>
-  <% page.posts.each(article => { %>
-    <div class="tag-item">
-      <a href="<%=url_for(article.path)%>">
-        <%=article.title%>
-      </a>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
-    </div>
-  <% }) %>
+  <!-- 迭代文章 -->
+  <%- partial('partials/print-posts') %> 
+
 </div>
 
-<div id="paginator">
-  <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
-</div>
+<% if (page.total > 1) { %> 
+  <div id="paginator">
+    <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
+  </div>
+<% } %> 
