@@ -5,5 +5,10 @@
 <% if (page.total > 1) { %> 
   <div id="paginator">
     <%-paginator({prev_text: '上一页',next_text: '下一页'})%>
+    <!-- 手动跳转 -->
+    <span class="input-ctl">
+      <input type="number" class="in">
+      <button id="bt" onclick="inclick('<%= page.total %>')">跳转</button>
+    </span>
   </div>
 <% } %> 

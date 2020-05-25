@@ -1,3 +1,4 @@
+// markdown
 @import 'theme/markdown'
   
 // 字体和全局样式
@@ -10,6 +11,16 @@
 
 // 代码块高亮
 @import 'highlight'
+
+// 文章展示（最新文章+文章页）
+@import 'post'
+
+// 文章存档
+@import 'archive'
+// 版权信息
+@import 'theme/article-origin'
+// 自定义页面样式
+@import 'message/about'
 
 // 布局-中间部分样式 -------------------------------
 #content-outer
@@ -64,11 +75,6 @@
     margin-left: 40% !important
 
 
-
-// 文章展示（最新文章+文章页）
-@import 'post'
-
-
 // 分页 -----------------------------------
 #paginator
   margin-bottom: 50px
@@ -95,11 +101,28 @@
 .current
   color: globle-font-color !important
 
-// 文章存档
-@import 'archive'
+.input-ctl .in
+  display inline
+  width 3em
+  border: 1.5px solid gray
+.input-ctl #bt
+  display inline
+  border: 1px solid globle-font-color
+  background-color: globle-font-color
+  border-radius: 5px
+  color: black
+  font-weight: bold
+  box-shadow: 2px 2px 2px #888888
+  &:hover
+    color: white
+    cursor pointer
 
-// 版权信息
-@import 'theme/article-origin'
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+input[type="number"]
+  -moz-appearance: textfield
 
-// 自定义页面样式
-@import 'message/about'
+
+
+

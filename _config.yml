@@ -8,8 +8,8 @@ language: zh-CN
 menu:
   最新文章: /
   #文章归档: /archives
-  信息快记: /fastnotes
-  书籍阅读: /books
+  # 信息快记: /fastnotes
+  # 书籍阅读: /books
   关于博客: /about
 
 
