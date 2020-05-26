@@ -41,10 +41,10 @@
   border-collapse: collapse
 
 #post a
-  color: globle-font-color
+  color: globle-font-color !important
   text-decoration: none
   &:hover
-    color red !important
+    color globle-a-color !important
 
 #post ul li
   margin-left: -15px
@@ -53,17 +53,22 @@
 #post ul li a
   text-decoration: none
 
-#post h3
-  padding 5px
-  border-radius 2px
-  background -webkit-linear-gradient(left, rgba(globle-font-color, 0.2), white) 
-  background -moz-linear-gradient(left, rgba(globle-font-color, 0.2), white) 
-  background -o-linear-gradient(left, rgba(globle-font-color, 0.2), white) 
-  background -ms-linear-gradient(left, rgba(globle-font-color, 0.2), white) 
-
-#post h4
-  border-left: 3px solid rgba(globle-font-color, 0.5)
-  padding-left: 5px
+// 给文章下的标题添加标记，提升标题辨析度
+#post h2::before
+  content: "## ";
+  color: globle-h-color;
+#post h3::before
+  content: "### ";
+  color: globle-h-color;
+#post h4::before
+  content: "#### ";
+  color: globle-h-color;
+#post h5::before
+  content: "##### ";
+  color: globle-h-color;
+#post h6::before
+  content: "###### ";
+  color: globle-h-color;
 
 #post p strong
   color globle-font-color
