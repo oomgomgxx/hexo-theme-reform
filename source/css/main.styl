@@ -34,6 +34,7 @@
     margin-left: 2%
     left 0px
     width: 100%
+    padding-left: 2.3em
 
 #content-outer
   padding-top: 1%
@@ -43,6 +44,8 @@
   color: globle-font-color
 #content-inner
   margin-left: 0.5%
+  @media screen and (max-width: 768px)
+    width: 120%
 
 
 // 页脚
@@ -68,10 +71,16 @@
   text-decoration: none
 #bottom-inner span
   margin-left: 58% !important
+  position: relative;
+  padding-right: 25px;
   @media screen and (max-width: 1020px)
-    margin-left: 53% !important
-  @media screen and (max-width: 768px)
     margin-left: 40% !important
+  @media screen and (max-width: 800px)
+    margin-left: 50% !important
+  @media screen and (max-width: 500px)
+    margin-left: 20% !important
+  @media screen and (max-width: 350px)
+    margin-left: 10% !important
 
 
 // 分页 -----------------------------------

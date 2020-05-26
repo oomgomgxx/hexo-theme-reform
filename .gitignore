@@ -1,3 +1,5 @@
 node_modules/
 .yo-repository/
+
 _config.yml
+fonts/PingFang.ttf
