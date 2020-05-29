@@ -37,6 +37,9 @@ gitalk:
 # 图片预览
 fancybox: true
 
+# 是否开启移动端适应
+open_mobile_mode: true
+
 # seo相关
 google_seo_html_verify: "-Tun6WZu4MnAXucY6rUK-udbDuzBndQkKEn0FTgBvAs"
 baidu_seo_html_verify: "Kfp083TiDg"
