@@ -15,7 +15,7 @@ menu:
 
 # 页面信息
 footer_msg: 魔鬼藏在细节中
-favicon: /img/favicon.ico
+favicon: /img/favicon.svg
 developer_msg: Developed by TanDi.
 
 
@@ -49,7 +49,7 @@ baidu_seo_html_verify: "Kfp083TiDg"
 stylesheets:
 - /css/main.css
 - /css/github.min.css
-
+- /css/csshake.min.css
 
 # 博客脚本
 scripts:

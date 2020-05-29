@@ -1,5 +1,4 @@
 
-
 // 侧栏导航 visited 效果 ----------------------------
 $(function(){ // 给导航栏选项分配标记
     var nav_length = $('#menu-inner a').length
@@ -14,10 +13,17 @@ $(function() {
     $('#menu-a').removeClass()
 
     // 获取状态记录
-    var current_num = sessionStorage.getItem("current_num"); 
-    var a_id = '#menu-inner a:eq(' + current_num + ')'
-    // 初始化样式
-    $(a_id).addClass('nav_active') 
+    var current_num = sessionStorage.getItem("current_num");
+
+    if (current_num != null) {
+        console.info("into")
+        var a_id = '#menu-inner a:eq(' + current_num + ')'
+        // 初始化样式
+        $(a_id).addClass('nav_active')
+    } else {
+        // 初始化样式
+        $('#menu-inner a:eq(0)').addClass('nav_active')
+    }
 
     $('#menu-inner a').click(function(event){
         // 当前点击的导航栏选项
@@ -45,13 +51,6 @@ $(function() {
 
 
 // 文章目录 visited 效果 --------------------------
-// $(function(){ // 给导航栏选项分配标记
-//     var nav_length = $('#menu-inner a').length
-//     for(var i=0; i<nav_length; i++) {
-//         var a_id = '#menu-inner a:eq(' + i + ')'
-//         $(a_id).val(i)
-//     }
-// });
 $(function() {
 
     $('.toc-link').click(function(event){

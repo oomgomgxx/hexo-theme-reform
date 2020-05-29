@@ -8,14 +8,14 @@ language: zh-CN
 menu:
   最新文章: /
   #文章归档: /archives
-  信息快记: /fastnotes
-  书籍阅读: /books
+  # 信息快记: /fastnotes
+  # 书籍阅读: /books
   关于博客: /about
 
 
 # 页面信息
-footer_msg: 魔鬼藏在細節中
-favicon: /img/favicon.ico
+footer_msg: 魔鬼藏在细节中
+favicon: /img/favicon.svg
 developer_msg: Developed by TanDi.
 
 
@@ -49,7 +49,7 @@ baidu_seo_html_verify: "Kfp083TiDg"
 stylesheets:
 - /css/main.css
 - /css/github.min.css
-
+- /css/csshake.min.css
 
 # 博客脚本
 scripts:

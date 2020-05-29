@@ -66,6 +66,7 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="/js/wrapImage.js"></script>
   <% } %>
+
 </head>
 
 <body>
@@ -88,9 +89,9 @@
 
     <!-- 大屏导航栏 -->
     <nav id="menu-outer">
-      <div id="menu-title" style="text-align: right; padding-right: 18px">
+      <div id="menu-title" style="text-align: right; padding-right: 18px" class="shake-trigger" >
         <h3>
-          <a href="/"><%=config.title%></a>
+          <a href="/" class="shake-rotate" title="主页"><%=config.title%></a>
         </h3>
       </div>
       <div id="menu-inner">
@@ -99,7 +100,8 @@
           <a id="menu-a" href="<%=theme.menu[key]%>"><%=key%></a>
         <% }); %>
       </div>
-      <div id="menu-footer"><%=theme.developer_msg%></div>
+      <!-- 导航栏页脚 -->
+      <div id="menu-footer" class="shake-rotate" title="开发者" ><%=theme.developer_msg%></div>
     </nav>
 
     <!-- 文章内容 -->
@@ -109,7 +111,9 @@
       </div>
       <div id="bottom-outer">
         <div id="bottom-inner">
-          <%=theme.footer_msg%>
+          <font class="foot_msg">
+          <%= theme.footer_msg %>
+          </font>
           <!-- 页脚导航 -->
           <span>
             <a id="bottom-totop" href="/">网站首页</a>
