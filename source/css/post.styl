@@ -12,8 +12,6 @@
   width: 46%
   padding-bottom: 5px
   border-bottom: 1px solid rgba(gray,0.1)
-  word-wrap: break-word; // 移除换行
-  word-break: break-all;
   @media (max-width: 1020px)
     width: 85%
     display block
@@ -100,6 +98,7 @@
   font-weight bold
   margin-left 3px
   padding 2px
+  white-space: nowrap // 文字整体换行
   &:hover
     color: white !important
 
