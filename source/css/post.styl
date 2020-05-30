@@ -44,16 +44,19 @@
 
 #post a
   color: globle-a-color !important
-  text-decoration: underline !important
+  text-decoration: underline
   &:hover
-    color globle-a-hover-color !important
+    background-image -webkit-linear-gradient(bottom, #ffc402, gray, #ffc402)
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
 
 #post ul li
   margin-left: -15px
   margin-bottom: 5px
 
-#post ul li a
-  text-decoration: none
+#post p a::after
+#post ul li a::after
+  content: "\1F517"
 
 // 给文章下的标题添加标记，提升标题辨析度
 #post h2::before
