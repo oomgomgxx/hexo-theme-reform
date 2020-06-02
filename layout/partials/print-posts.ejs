@@ -12,7 +12,7 @@
         <!-- 文章名称 -->
         <div class="post-title">
             <a href="<%= url_for(post.path) %>" style="text-decoration: none;" >
-            <%= post.title %>
+                <%= post.title %>
             </a>
         </div>
 
@@ -22,7 +22,13 @@
             <!-- 文章日期 -->
             <time datetime="<%= post.date.toJSON() %>"></time><%=date(post.date)%> &ensp; 
             <!-- 文章作者 -->
-            作者: <%= config.author %>
+            作者: <%= config.author %> &ensp;
+            <!-- 判断文章是都为原创文章 -->
+            <% if (post.peprint) { %>
+                类型：转载
+            <% } else { %>
+                类型：原创
+            <% } %>  
         </div>
 
         <!-- 摘要 -->

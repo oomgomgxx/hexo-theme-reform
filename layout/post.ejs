@@ -2,14 +2,20 @@
 <article id="post">
 
   <!-- 文章标题 -->
-  <h1><%=page.title%></h1>
+  <h1><%= page.title %></h1>
 
   <!-- 文章元信息 -->
   <span class="post-metadata">
     <!-- 文章日期 -->
     <i class="fa fa-calendar"></i>&thinsp;<%= date(page.date) %> &ensp;
     <!-- 文章作者 -->
-    作者: <%= config.author %>
+    作者: <%= config.author %> &ensp;
+    <!-- 判断文章是都为原创文章 -->
+    <% if (page.peprint) { %>
+      类型：转载
+    <% } else { %>
+      类型：原创
+    <% } %>  
   </span>
 
   <hr/>
