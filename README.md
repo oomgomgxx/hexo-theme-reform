@@ -3,6 +3,3 @@
 * 支持 Gitalk 留言
 * 文章目录
 
-# Theme Demo
-* [学然后知不足](www.tandi.pub)
-
